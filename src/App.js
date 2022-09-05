@@ -9,11 +9,13 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Book from './components/Book/Book';
 import Header from './components/Header/Header';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
+    <AuthProvider>
       <Router>
-          <Header/>
+        <Header/>
           <Switch>
             <Route path="/home">
               <Home />
@@ -29,6 +31,7 @@ function App() {
             </Route>
           </Switch>
       </Router>
+    </AuthProvider>
   );
 }
 
